@@ -1,0 +1,26 @@
+{
+  "name": "breno-blog-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc --build",
+    "start": "npm run build && npx pm2 start ./dist/index.js --name=breno-blog-api",
+    "stop": "npx pm2 stop breno-blog-api",
+    "dev": "nodemon ./src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "nodemon": "^3.1.4",
+    "pm2": "^5.4.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
+  }
+}
