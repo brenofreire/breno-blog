@@ -49,3 +49,4 @@ jobs:
             --document-name "AWS-RunShellScript" \
             --parameters commands=["cd /home/ubuntu/app","npm install --production","npx pm2 stop breno-blog-api || true","npx pm2 start ./dist/index.js --name=breno-blog-api"] \
             --region "us-east-1"
+            --debug
