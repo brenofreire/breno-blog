@@ -43,9 +43,14 @@ jobs:
           aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
           aws configure set default.region us-east-1
 
-          # Send commands to the EC2 instance using SSM
+          # Send commands to the EC2 instance using SSM with cleaner parameters
           aws ssm send-command \
             --instance-ids "$EC2_INSTANCE_ID" \
             --document-name "AWS-RunShellScript" \
-            --parameters '{"commands":["cd /home/ubuntu/app", "npm install --production", "npx pm2 stop breno-blog-api || true", "npx pm2 start ./dist/index.js --name=breno-blog-api"]}' \
+            --parameters commands="[
+              'cd /home/ubuntu/app',
+              'npm install --production',
+              'npx pm2 stop breno-blog-api || true',
+              'npx pm2 start ./dist/index.js --name=breno-blog-api'
+            ]" \
             --region "us-east-1"
