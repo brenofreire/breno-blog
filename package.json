@@ -9,13 +9,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "serverless": "^4.4.0"
-  },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.145",
-    "@types/express": "^4.17.21",
     "@types/serverless": "^3.12.22",
+    "serverless": "^3.39.0",
     "serverless-plugin-typescript": "^2.1.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.2"
