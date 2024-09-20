@@ -4,22 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc --build",
-    "start": "npm run build && npx pm2 start ./dist/index.js --name=breno-blog-api",
-    "stop": "npx pm2 stop breno-blog-api",
-    "dev": "nodemon ./src/index.ts"
+    "deploy:dev": "sls deploy --stage dev"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.21.0"
+    "serverless": "^4.4.0"
   },
   "devDependencies": {
+    "@types/aws-lambda": "^8.10.145",
     "@types/express": "^4.17.21",
-    "nodemon": "^3.1.4",
-    "pm2": "^5.4.2",
+    "@types/serverless": "^3.12.22",
+    "serverless-plugin-typescript": "^2.1.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.2"
   }
