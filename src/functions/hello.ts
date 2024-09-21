@@ -6,7 +6,6 @@ export const handler: APIGatewayProxyHandler =
       const response = {
         statusCode: 200,
         body: "HELLO YOU ARE MY FRIEND!!!",
-        anotherValueTest: true,
       };
 
       return response;
